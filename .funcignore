@@ -1,0 +1,13 @@
+*.js.map
+*.ts
+.git*
+.vscode
+.publish
+local.settings.json
+test
+
+# Comment out if you use remote build on deployment
+tsconfig.json
+
+# Un-comment out if you use remote build on deployment
+# node_modules
