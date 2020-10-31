@@ -34,9 +34,9 @@ adapter.onTurnError = async (context, error) => {
 const botActivityHandler = new BotActivityHandler();
 
 const httpTrigger: AzureFunction = async function (context: Context) {
-  const webReq = new WebRequest(context);
-  const webRes = new WebResponse(context);
-  await adapter.processActivity(webReq, webRes, async (context: TurnContext) => {
+  const req = new WebRequest(context);
+  const res = new WebResponse(context);
+  await adapter.processActivity(req, res, async (context: TurnContext) => {
     // Process bot activity
     await botActivityHandler.run(context);
   });
